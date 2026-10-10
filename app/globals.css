@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --paper: #fbf6ec;
+  --card: #fffdf8;
+  --ink: #2b2118;
+  --muted: #7a6a5a;
+  --line: #e6dccb;
+  --rust: #c2410c;
+  --rust-dark: #9a3412;
+  --moss: #4d7c0f;
+  --sun: #f0c828;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-rust: var(--rust);
+  --color-rust-dark: var(--rust-dark);
+  --color-moss: var(--moss);
+  --color-sun: var(--sun);
+  --font-display: var(--font-fredoka);
+  --font-sans: var(--font-nunito);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-nunito), system-ui, sans-serif;
+}
+
+/* Soft dotted "graph paper" behind the page */
+.dots {
+  background-image: radial-gradient(var(--line) 1px, transparent 1px);
+  background-size: 18px 18px;
 }
